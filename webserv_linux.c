@@ -75,9 +75,8 @@ void request_handler(void *arg){
 
 	int rcvd = recv(sd, msg, BUFSIZE-1, 0);
 	if(rcvd<=0) error_handling("Error about recv()!!");
-	printf("-----------Request message from Client-----------\n");
+	printf("Request message : Client\n");
 	printf("%s",msg);
-	printf("\n-------------------------------------------------\n");
 	char post_information[SEND_MESSAGE_BUFSIZE];
 	char *curr_msg = NULL;
 	char METHOD[4]="";
